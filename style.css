@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('imgBotones/FondoInicio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+#inicio img {
+    width: 200px;
+    margin-top: 50px;
+}
+
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFA500; /* Naranja de Sinergy */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 110px;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    min-width: 120px;
+}
+
+#tiempo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 69, 0, 0.8); /* Rojo anaranjado */
+    padding: 3px 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    min-width: 80px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+button {
+    background: rgb(240, 240, 240);
+    border: none;
+    color: bl;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+#btnEmpezar {
+    background: rgb(8, 74, 130);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}  
+
+.oculto {
+    display: none;
+}
+
+
+h1 {
+    font-size: 5rem;
+    color: #ff6600;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Estilos para la pregunta */
+#pregunta {
+    font-size: 2rem;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgb(8, 74, 130);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 80%;
+    word-wrap: break-word;
+    white-space: normal;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de las opciones en 2 filas x 2 columnas */
+#opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Estilos de los botones de opciones */
+.opcion {
+    background: rgb(225, 125, 13); /* Color naranja de Sinergy */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.opcion:hover {
+    background: #d67e17; /* Un naranja más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 600px) {
+    #pregunta {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    #opciones {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .opcion {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+}
+
+#comodines button {
+    background: #ffaa00;
+}
+
+#temporizador, #puntaje {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+#btnEmpezar {
+    font-weight: bold;   
+}
+
+#btnAyudaAleatoria1 {
+    background-image: url('./ImagenJPEG/casino.png');
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+#btnAyudaAleatoria2 {
+    background-image: url('./ImagenJPEG/casino.png');
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.pantalla-ganador p {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
