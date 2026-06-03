@@ -1,2 +1,2 @@
-# 103-funcionarios-dicen
-Juego interactivo para inducciones y reinducciones en Sinergy
+# Semana-de-la-Seguridad-y-Salud-en-el-Trabajo
+Juego interactivo para la Semana de la Seguridad y Salud en el Trabajo en Sinergy
