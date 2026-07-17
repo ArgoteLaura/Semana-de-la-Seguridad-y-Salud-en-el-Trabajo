@@ -6,84 +6,84 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const preguntas = [
     {
-        pregunta: "1. ¿Qué significan las siglas COPASST?",
-        opciones: ["a. Comité de Paz, Salud y Seguridad en el Trabajo.",
-        "b. Comité Paritario Asociado y Seguro en el Trabajo.",
-        "c. Conformación Paritaria de Seguridad y Salud en el Trabajo.",
-        "d. Comité Paritario de Seguridad y Salud en el Trabajo."],
-        respuesta: 3
+        pregunta: "1. ¿Qué norma establece la obligatoriedad de conformar el COPASST en las empresas colombianas?",
+        opciones: ["a. Resolución 1843 de 2025.",
+        "b. Resolución 2013 de 1986.",
+        "c. Ley 100 de 1993.",
+        "d. Decreto 1295 de 1994."],
+        respuesta: 1
     },
     {
-        pregunta: "2. ¿Cuál es la función principal del COPASST?",
-        opciones: ["a. Gestionar las actividades recreativas de los empleados.",
-        "b. Velar por la implementación de programas de bienestar social.",
-        "c. Promover y vigilar las normas de seguridad y salud en el trabajo.",
-        "d. Administrar los recursos financieros del área de seguridad."],
+        pregunta: "2. ¿Cada cuánto tiempo se renuevan los miembros del COPASST?",
+        opciones: ["a. Cada año.",
+        "b. Cada dos años.",
+        "c. Cada seis meses.",
+        "d. Cada tres años."],
+        respuesta: 1
+    },
+    {
+        pregunta: "3. ¿Quién designa a los representantes del empleador ante el COPASST?",
+        opciones: ["a. El Ministerio del Trabajo.",
+        "b. La ARL.",
+        "c. El empleador.",
+        "d. Los trabajadores mediante votación."],
         respuesta: 2
     },
     {
-        pregunta: "3. ¿Cuál de las siguientes es una responsabilidad del COPASST?",
-        opciones: ["a. Administrar los contratos laborales de los empleados.",
-        "b. Investigar los accidentes de trabajo y proponer medidas correctivas.",
-        "c. Supervisar el rendimiento productivo de los empleados.",
-        "d. Gestionar los permisos de vacaciones de los empleados."],
+        pregunta: "4. ¿Cómo se eligen los representantes de los trabajadores ante el COPASST?",
+        opciones: ["a. Por designación directa del empleador.",
+        "b. Por votación libre entre los trabajadores.",
+        "c. Por sorteo entre los jefes de área.",
+        "d. Por antigüedad en la empresa."],
         respuesta: 1
     },
     {
-        pregunta: "4. ¿Qué debe hacer el COPASST ante la identificación de condiciones peligrosas en el lugar de trabajo?",
-        opciones: ["a. Elaborar un informe anual de productividad.",
-        "b. Notificar a las autoridades locales de inmediato.",
-        "c. Recomendar medidas correctivas y de prevención.",
-        "d. Despedir a los empleados que estén en riesgo."],
+        pregunta: "5. ¿Cuál es el número mínimo de empleados que obliga a una empresa a conformar el COPASST (en lugar de Vigía de SST)?",
+        opciones: ["a. 5 trabajadores.",
+        "b. 10 trabajadores.",
+        "c. 20 trabajadores.",
+        "d. 50 trabajadores."],
+        respuesta: 1
+    },
+    {
+        pregunta: "6. ¿Qué figura reemplaza al COPASST en empresas con menos de 10 trabajadores?",
+        opciones: ["a. El Comité de Convivencia Laboral.",
+        "b. El Vigía Ocupacional.",
+        "c. El Vigía de Seguridad y Salud en el Trabajo.",
+        "d. El SG-SST directamente a cargo del gerente."],
         respuesta: 2
     },
     {
-        pregunta: "5. ¿Quiénes conforman el COPASST dentro de una empresa?",
-        opciones: ["a. Solo los directivos de la empresa.",
-        "b. Representantes de los empleadores y trabajadores en partes iguales.",
-        "c. Solo los representantes de los trabajadores.",
-        "d. Un representante del departamento de recursos humanos."],
+        pregunta: "7. ¿Con qué periodicidad mínima debe reunirse ordinariamente el COPASST?",
+        opciones: ["a. Una vez por semana.",
+        "b. Una vez al mes.",
+        "c. Una vez cada tres meses.",
+        "d. Una vez al año."],
         respuesta: 1
     },
     {
-        pregunta: "6. ¿Cuál es el principal compromiso de SINERGY con los funcionarios para procurar la Seguridad y Salud en el Trabajo?",
-        opciones: ["a. Aumentar la productividad de los empleados.",
-        "b. Implementar un Sistema de Gestión de la Seguridad y Salud en el Trabajo (SG-SST).",
-        "c. Reducir costos operativos.",
-        "d. Ampliar la oferta de servicios."],
+        pregunta: "8. ¿Cuál de las siguientes es una función principal del COPASST?",
+        opciones: ["a. Definir los salarios de los trabajadores.",
+        "b. Vigilar el desarrollo de las actividades del Sistema de Gestión de SST.",
+        "c. Aprobar los contratos laborales.",
+        "d. Realizar los exámenes médicos ocupacionales."],
         respuesta: 1
     },
     {
-        pregunta: "7. ¿Qué aspecto se busca promover a través de la implementación del SG-SST?",
-        opciones: ["a. La competitividad en el mercado.",
-        "b. La prevención de riesgos laborales y la protección de la salud y seguridad de los trabajadores.",
-        "c. La expansión de la empresa.",
-        "d. La innovación tecnológica."],
+        pregunta: "9. ¿Quién debe garantizar el tiempo y los recursos necesarios para el funcionamiento del COPASST?",
+        opciones: ["a. La ARL exclusivamente.",
+        "b. El empleador.",
+        "c. El Ministerio de Salud.",
+        "d. Los propios integrantes del comité, sin apoyo de la empresa."],
         respuesta: 1
     },
     {
-        pregunta: "8. ¿Cómo se lleva a cabo la identificación de riesgos en la organización?",
-        opciones: ["a. A través de encuestas anuales.",
-        "b. Solo en caso de accidentes.",
-        "c. No se realizará identificación de riesgos.",
-        "d. Mediante la evaluación y valoración de peligros."],
-        respuesta: 3
-    },
-    {
-        pregunta: "9. ¿Qué recursos se destinan para la implementación del SG-SST?",
-        opciones: ["a. Recursos financieros, técnicos y humanos.",
-        "b. Solo recursos humanos.",
-        "c. Recursos solo para capacitaciones.",
-        "d. No se destinarán recursos específicos."],
+        pregunta: "10. ¿Qué norma regula actualmente, de manera general, la implementación del Sistema de Gestión de SST en el que se enmarca el COPASST?",
+        opciones: ["a. Decreto 1072 de 2015.",
+        "b. Resolución 1843 de 2025.",
+        "c. Decreto 4050 de 1994.",
+        "d. Ley 1562 de 2012 exclusivamente."],
         respuesta: 0
-    },
-    {
-        pregunta: "10. ¿A quién se debe informar la política de seguridad y salud en el trabajo a los empleados?",
-        opciones: ["a. Solo en reuniones trimestrales.",
-        "b. A través de correos electrónicos.",
-        "c. Se debe informar a todo el personal vinculado contractualmente con SINERGY.",
-        "d. No se comunicará formalmente."],
-        respuesta: 2
     },
 ];
 
