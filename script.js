@@ -202,8 +202,6 @@ function verificarRespuesta(indice) {
             <div class="pantalla-ganador">
             <h1>¡Felicidades, gran ganador!</h1>
 
-            <p>
-                Eres el gran ganador de <strong>"103 Funcionarios Dicen"</strong> sobre el comité de COPASST. </p> 
         <p>
                 Tu conocimiento y rapidez te han llevado a la cima, demostrando que estás bien 
                 informado sobre la seguridad y salud en el trabajo.
