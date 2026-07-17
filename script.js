@@ -158,7 +158,7 @@ function verificarRespuesta(indice) {
         puntuacion += 100;
 
         // Mostrar alerta de respuesta correcta sin botón
-        Swal.fire({
+        swalOcultarPreguntas({
             title: "¡Correcto!",
             icon: "success",
             showConfirmButton: false, // Oculta el botón de confirmación
@@ -181,7 +181,7 @@ function verificarRespuesta(indice) {
     } else {
         // Solo finalizar el juego si no se ha alcanzado la puntuación máxima
         if (puntuacion < 1000) {
-            Swal.fire({
+            swalOcultarPreguntas({
                 title: "Incorrecto",
                 text: "Intenta de nuevo.",
                 icon: "error"
@@ -228,6 +228,53 @@ function actualizarPuntuacion() {
     document.getElementById("score").innerText = "Puntaje: " + puntuacion;
 }
 
+function ocultarPreguntaYRespuestas() {
+    const pregunta = document.getElementById("pregunta");
+    const opciones = document.getElementById("opciones");
+    const comodines = document.querySelector(".comodines");
+    [pregunta, opciones, comodines].forEach(element => {
+        if (element) {
+            element.style.visibility = "hidden";
+            element.style.opacity = "0";
+            element.style.pointerEvents = "none";
+        }
+    });
+}
+
+function mostrarPreguntaYRespuestas() {
+    const pregunta = document.getElementById("pregunta");
+    const opciones = document.getElementById("opciones");
+    const comodines = document.querySelector(".comodines");
+    [pregunta, opciones, comodines].forEach(element => {
+        if (element) {
+            element.style.visibility = "";
+            element.style.opacity = "";
+            element.style.pointerEvents = "";
+        }
+    });
+}
+
+function swalOcultarPreguntas(options) {
+    const originalDidOpen = options.didOpen;
+    const originalDidClose = options.didClose;
+
+    options.didOpen = (popup) => {
+        ocultarPreguntaYRespuestas();
+        if (typeof originalDidOpen === "function") {
+            originalDidOpen(popup);
+        }
+    };
+
+    options.didClose = () => {
+        mostrarPreguntaYRespuestas();
+        if (typeof originalDidClose === "function") {
+            originalDidClose();
+        }
+    };
+
+    return Swal.fire(options);
+}
+
 function iniciarTemporizador() {
     clearInterval(intervaloTiempo);
     tiempoRestante = 30;
@@ -237,7 +284,7 @@ function iniciarTemporizador() {
         document.getElementById("tiempo").innerText = tiempoRestante;
         if (tiempoRestante <= 0) {
             clearInterval(intervaloTiempo);
-            Swal.fire({
+            swalOcultarPreguntas({
                 title: "Tiempo agotado",
                 icon: "warning",
                 confirmButtonText: "Aceptar"
@@ -257,7 +304,7 @@ function finalizarJuego() {
         audioPreguntas.currentTime = 0; // Reiniciar el audio a su posición inicial
     }
     
-    Swal.fire({
+    swalOcultarPreguntas({
         title: "Juego terminado",
         text: "Puntuación: " + puntuacion,
         icon: "info",
@@ -272,7 +319,7 @@ function finalizarJuego() {
 
 function usar5050() {
     // Mostrar mensaje de carga
-    Swal.fire({
+    swalOcultarPreguntas({
         title: "50:50",
         text: "Eliminando dos opciones incorrectas...",
         //icon: "info",
@@ -297,7 +344,7 @@ function usar5050() {
 function usarLlamada() {
     let p = preguntas[indicePregunta];
     let respuestaCorrecta = p.opciones[p.respuesta];
-    Swal.fire({
+    swalOcultarPreguntas({
         title: "Tus amigos sugieren que...",
         text: "Llama a dos amigos",
         imageUrl: "./imgBotones/Llamada_2_Amigos.jpg",
@@ -312,7 +359,7 @@ function usarLlamada() {
 function usarComite() {
     let p = preguntas[indicePregunta];
     let respuestaCorrecta = p.opciones[p.respuesta];
-    Swal.fire({
+    swalOcultarPreguntas({
         title: "La audiencia recomienda que... ",
         text: "Dirijase a la audiencia",
         imageUrl: "./imgBotones/Audiencia.jpg",
@@ -327,7 +374,7 @@ function usarComite() {
 function usarSGSST() {
     let p = preguntas[indicePregunta];
     let respuestaCorrecta = p.opciones[p.respuesta];
-    Swal.fire({
+    swalOcultarPreguntas({
         title: "El SG-SST sugiere que...",
         text: "Dirijase a la profesional",
         imageUrl: "./imgBotones/SG-SST.jpg",
@@ -340,7 +387,7 @@ function usarSGSST() {
 }
 
 function perderJuego1() {
-    Swal.fire({ 
+    swalOcultarPreguntas({ 
         title: "Pierde el turno", 
         text: "Has perdido el juego.", 
         imageUrl: "./imgBotones/Pierde_Turno.jpg",
@@ -353,7 +400,7 @@ function perderJuego1() {
 }
 
 function perderJuego2() {
-    Swal.fire({ 
+    swalOcultarPreguntas({ 
         title: "Pierde el turno", 
         text: "Has perdido el juego.", 
         imageUrl: "./imgBotones/Pierde_Turno.jpg",
@@ -374,7 +421,7 @@ function usarAyudaAleatoria1() {
     
     if (comodin1Usado) {
         console.log("Condición cumplida: comodin1Usado es true");
-        Swal.fire({
+        swalOcultarPreguntas({
             title: "Comodín ya utilizado",
             text: "Ya has usado este comodín anteriormente",
             icon: "warning",
@@ -385,7 +432,7 @@ function usarAyudaAleatoria1() {
     
     comodin1Usado = true;
     
-    Swal.fire({
+    swalOcultarPreguntas({
         title: "Cargando...",
         text: "Seleccionando ayuda aleatoria",
         allowOutsideClick: false,
@@ -429,7 +476,7 @@ function usarAyudaAleatoria1() {
 
 function usarAyudaAleatoria2() {
     if (comodin2Usado) {
-        Swal.fire({
+        swalOcultarPreguntas({
             title: "Comodín ya utilizado",
             text: "Ya has usado este comodín anteriormente",
             icon: "warning",
@@ -440,7 +487,7 @@ function usarAyudaAleatoria2() {
     
     comodin2Usado = true;
     
-    Swal.fire({
+    swalOcultarPreguntas({
         title: "Cargando...",
         text: "Seleccionando ayuda aleatoria",
         allowOutsideClick: false,
